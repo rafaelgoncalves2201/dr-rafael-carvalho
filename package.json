@@ -1,0 +1,13 @@
+{
+  "name": "dr-rafael-carvalho",
+  "version": "1.0.0",
+  "description": "Site do Dr. Rafael Carvalho — Otorrinolaringologista & Rinoplastia",
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
