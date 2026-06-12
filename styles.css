@@ -1468,6 +1468,10 @@
       .footer-inner > :last-child { display: none; }
     }
     @media (max-width: 900px) {
+      nav { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: flex; }
       .hero-inner { grid-template-columns: 1fr; padding-top: 120px; }
       .hero-image-wrap { order: -1; max-width: 360px; margin: 0 auto; }
       .hero-photo-frame { max-width: 100%; }
@@ -1490,10 +1494,6 @@
     }
     @media (max-width: 640px) {
       .container { padding: 0 20px; }
-      nav { display: none; }
-      .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      .mobile-menu { display: flex; }
       #hero { padding: 100px 0 80px; }
       .hero-inner { gap: 40px; }
       .esp-grid { grid-template-columns: 1fr; }
