@@ -52,6 +52,12 @@
       text-transform: uppercase;
       color: var(--gold);
     }
+    .section-label--wide {
+      display: block;
+      font-size: 0.82rem;
+      letter-spacing: 0.16em;
+      margin-bottom: 4px;
+    }
     .section-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2rem, 4vw, 3.2rem);
@@ -710,6 +716,9 @@
       gap: 100px;
       align-items: center;
     }
+    .rino-inner--full {
+      grid-template-columns: 1fr;
+    }
     .rino-image-wrap { position: relative; }
     .rino-image {
       padding-bottom: 110%;
@@ -760,32 +769,32 @@
       margin-top: 8px;
     }
     .rino-bio {
-      font-size: 0.97rem;
-      line-height: 1.9;
+      font-size: 1.05rem;
+      line-height: 1.85;
       color: var(--gray);
       margin-bottom: 24px;
     }
     .rino-indicacoes-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
+      font-size: 1.3rem;
       font-weight: 600;
       color: var(--navy);
       margin-bottom: 18px;
       margin-top: 32px;
     }
     .rino-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 40px;
       margin-bottom: 36px;
     }
     .rino-list-item {
       display: flex;
       align-items: flex-start;
       gap: 14px;
-      font-size: 0.88rem;
+      font-size: 0.97rem;
       color: var(--gray);
-      line-height: 1.5;
+      line-height: 1.6;
     }
     .rino-list-item::before {
       content: '';
@@ -817,33 +826,36 @@
       gap: 100px;
       align-items: center;
     }
+    .septo-inner--full {
+      grid-template-columns: 1fr;
+    }
     .septo-bio {
-      font-size: 0.97rem;
-      line-height: 1.9;
+      font-size: 1.05rem;
+      line-height: 1.85;
       color: rgba(255,255,255,0.65);
       margin-bottom: 24px;
     }
     .septo-indicacoes-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
+      font-size: 1.3rem;
       font-weight: 600;
       color: var(--white);
       margin-bottom: 18px;
       margin-top: 32px;
     }
     .septo-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 40px;
       margin-bottom: 36px;
     }
     .septo-list-item {
       display: flex;
       align-items: flex-start;
       gap: 14px;
-      font-size: 0.88rem;
+      font-size: 0.97rem;
       color: rgba(255,255,255,0.6);
-      line-height: 1.5;
+      line-height: 1.6;
     }
     .septo-list-item::before {
       content: '';
@@ -885,33 +897,36 @@
       gap: 100px;
       align-items: center;
     }
+    .nasofi-inner--full {
+      grid-template-columns: 1fr;
+    }
     .nasofi-bio {
-      font-size: 0.97rem;
-      line-height: 1.9;
+      font-size: 1.05rem;
+      line-height: 1.85;
       color: var(--gray);
       margin-bottom: 24px;
     }
     .nasofi-indicacoes-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
+      font-size: 1.3rem;
       font-weight: 600;
       color: var(--navy);
       margin-bottom: 18px;
       margin-top: 32px;
     }
     .nasofi-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 40px;
       margin-bottom: 36px;
     }
     .nasofi-list-item {
       display: flex;
       align-items: flex-start;
       gap: 14px;
-      font-size: 0.88rem;
+      font-size: 0.97rem;
       color: var(--gray);
-      line-height: 1.5;
+      line-height: 1.6;
     }
     .nasofi-list-item::before {
       content: '';
@@ -1479,9 +1494,9 @@
       .sobre-badge { right: 0; }
       .esp-grid { grid-template-columns: repeat(2, 1fr); }
       .esp-gallery { grid-template-columns: 1fr; }
-      ..rino-inner {grid-template-columns: 1fr 1fr; }
-      .septo-inner {grid-template-columns: 1fr 1fr; }
-      .nasofi-inner {grid-template-columns: 1fr 1fr; }
+      .rino-list,
+      .septo-list,
+      .nasofi-list { grid-template-columns: 1fr; }
       .locais-grid { grid-template-columns: 1fr 1fr; }
       .jornada-grid { grid-template-columns: repeat(3, 1fr); }
       .jornada-grid::before { display: none; }
