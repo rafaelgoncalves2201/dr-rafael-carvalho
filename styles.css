@@ -155,7 +155,7 @@
     }
     #header.scrolled {
       padding: 14px 0;
-      background: rgba(6, 27, 77, 0.9);
+      background: rgba(6, 27, 77, 0.92);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(212,175,106,0.15);
@@ -436,7 +436,7 @@
       display: flex;
       align-items: center;
       gap: 60px;
-      animation: stripScroll 20s linear infinite;
+      animation: stripScroll 22s linear infinite;
       white-space: nowrap;
     }
     .strip-item {
@@ -543,67 +543,6 @@
     .sobre-list-text { font-size: 0.9rem; color: var(--charcoal); line-height: 1.5; }
     .sobre-list-text strong { font-weight: 600; }
 
-    /* ===== NÚMEROS ===== */
-    #numeros {
-      padding: 100px 0;
-      background: var(--navy);
-      position: relative;
-      overflow: hidden;
-    }
-    #numeros::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(212,175,106,0.04) 0%, transparent 50%);
-    }
-    .numeros-inner {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-    .numero-card {
-      background: rgba(6,27,77,0.6);
-      padding: 52px 36px;
-      text-align: center;
-      transition: background 0.3s;
-      position: relative;
-    }
-    .numero-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 50%; transform: translateX(-50%);
-      width: 0; height: 2px;
-      background: var(--gold);
-      transition: width 0.4s;
-    }
-    .numero-card:hover { background: rgba(10,38,96,0.8); }
-    .numero-card:hover::after { width: 60%; }
-    .numero-value {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      font-weight: 600;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .numero-label {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
-    }
-    .numero-icon {
-      width: 40px; height: 40px;
-      border: 1px solid rgba(212,175,106,0.25);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 20px;
-    }
-    .numero-icon svg { width: 18px; height: 18px; stroke: var(--gold); }
-
     /* ===== ESPECIALIDADES ===== */
     #especialidades {
       padding: 120px 0;
@@ -702,6 +641,359 @@
       color: var(--gold);
       font-weight: 600;
     }
+
+    /* ===== JORNADA ===== */
+    #jornada {
+      padding: 120px 0;
+      background: var(--white);
+    }
+    .jornada-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      position: relative;
+      margin-top: 72px;
+    }
+    .jornada-grid::before {
+      content: '';
+      position: absolute;
+      top: 36px; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.4;
+    }
+    .jornada-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+    }
+    .jornada-num {
+      width: 72px; height: 72px;
+      border: 1px solid rgba(212,175,106,0.4);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--white);
+      margin-bottom: 28px;
+      transition: var(--transition);
+      position: relative;
+      z-index: 1;
+    }
+    .jornada-step:hover .jornada-num { background: var(--gold); border-color: var(--gold); }
+    .jornada-num-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--navy);
+      transition: color 0.3s;
+    }
+    .jornada-step:hover .jornada-num-text { color: var(--navy-dark); }
+    .jornada-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .jornada-desc { font-size: 0.82rem; color: var(--gray); line-height: 1.65; }
+
+    /* ===== RINOPLASTIA ===== */
+    #rinoplastia {
+      padding: 120px 0;
+      background: var(--ice);
+    }
+    .rino-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+    .rino-image-wrap { position: relative; }
+    .rino-image {
+      padding-bottom: 110%;
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #e8edf4, #d8dfe8);
+    }
+    .rino-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .rino-image-placeholder {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, #e8edf4 0%, #cdd4e2 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .rino-image-placeholder svg { width: 56px; height: 56px; stroke: rgba(6,27,77,0.2); fill: none; }
+    .rino-image-placeholder span { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(6,27,77,0.3); }
+    .rino-image-caption {
+      position: absolute;
+      bottom: 28px; left: 28px; right: 28px;
+      background: rgba(6,27,77,0.9);
+      backdrop-filter: blur(10px);
+      padding: 20px 24px;
+      border-left: 3px solid var(--gold);
+      border-radius: var(--radius);
+    }
+    .rino-caption-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.4;
+    }
+    .rino-caption-author {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 8px;
+    }
+    .rino-bio {
+      font-size: 0.97rem;
+      line-height: 1.9;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+    .rino-indicacoes-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 18px;
+      margin-top: 32px;
+    }
+    .rino-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .rino-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.88rem;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+    .rino-list-item::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    /* ===== SEPTO ===== */
+    #septo {
+      padding: 120px 0;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+    #septo::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(212,175,106,0.04) 0%, transparent 60%);
+    }
+    .septo-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+    .septo-bio {
+      font-size: 0.97rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 24px;
+    }
+    .septo-indicacoes-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 18px;
+      margin-top: 32px;
+    }
+    .septo-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .septo-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+    .septo-list-item::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+    .septo-image-wrap { position: relative; }
+    .septo-image {
+      padding-bottom: 110%;
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #0a2660, #040f2e);
+    }
+    .septo-image-placeholder {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, #0d2d73 0%, #061B4D 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .septo-image-placeholder svg { width: 56px; height: 56px; stroke: rgba(212,175,106,0.2); fill: none; }
+    .septo-image-placeholder span { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(212,175,106,0.3); }
+
+    /* ===== NASOFIBROSCOPIA ===== */
+    #nasofi {
+      padding: 120px 0;
+      background: var(--white);
+    }
+    .nasofi-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+    .nasofi-bio {
+      font-size: 0.97rem;
+      line-height: 1.9;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+    .nasofi-indicacoes-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 18px;
+      margin-top: 32px;
+    }
+    .nasofi-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .nasofi-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.88rem;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+    .nasofi-list-item::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+    .nasofi-image-wrap { position: relative; }
+    .nasofi-image {
+      padding-bottom: 110%;
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, #e8edf4, #d8dfe8);
+    }
+    .nasofi-image-placeholder {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, #e8edf4 0%, #cdd4e2 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .nasofi-image-placeholder svg { width: 56px; height: 56px; stroke: rgba(6,27,77,0.2); fill: none; }
+    .nasofi-image-placeholder span { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(6,27,77,0.3); }
+
+    /* ===== LOCAIS ===== */
+    #locais {
+      padding: 120px 0;
+      background: var(--ice);
+    }
+    .locais-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 72px;
+    }
+    .local-card {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.06);
+      padding: 40px 32px;
+      border-radius: var(--radius-lg);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .local-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .local-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-gold); border-color: rgba(212,175,106,0.2); }
+    .local-card:hover::before { transform: scaleX(1); }
+    .local-icon {
+      width: 48px; height: 48px;
+      border: 1px solid rgba(212,175,106,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+    }
+    .local-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; }
+    .local-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .local-addr { font-size: 0.87rem; color: var(--gray); line-height: 1.7; margin-bottom: 20px; }
+    .local-tel { display: flex; align-items: center; gap: 8px; }
+    .local-tel svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; flex-shrink: 0; }
+    .local-tel a { font-size: 0.9rem; color: var(--charcoal); font-weight: 500; transition: color 0.3s; }
+    .local-tel a:hover { color: var(--gold); }
 
     /* ===== DIFERENCIAIS ===== */
     #diferenciais {
@@ -967,7 +1259,7 @@
       overflow: hidden;
       transition: max-height 0.4s ease, padding 0.4s ease;
     }
-    .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 28px; }
+    .faq-item.open .faq-answer { max-height: 400px; padding-bottom: 28px; }
     .faq-answer p { font-size: 0.92rem; color: var(--gray); line-height: 1.8; }
 
     /* ===== CTA ===== */
@@ -1176,14 +1468,23 @@
       .footer-inner > :last-child { display: none; }
     }
     @media (max-width: 900px) {
+      nav { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: flex; }
       .hero-inner { grid-template-columns: 1fr; padding-top: 120px; }
       .hero-image-wrap { order: -1; max-width: 360px; margin: 0 auto; }
       .hero-photo-frame { max-width: 100%; }
       .sobre-inner { grid-template-columns: 1fr; gap: 60px; }
       .sobre-badge { right: 0; }
-      .numeros-inner { grid-template-columns: repeat(2, 1fr); }
       .esp-grid { grid-template-columns: repeat(2, 1fr); }
       .esp-gallery { grid-template-columns: 1fr; }
+      .rino-inner { grid-template-columns: 1fr; gap: 60px; }
+      .septo-inner { grid-template-columns: 1fr; gap: 60px; }
+      .nasofi-inner { grid-template-columns: 1fr; gap: 60px; }
+      .locais-grid { grid-template-columns: 1fr 1fr; }
+      .jornada-grid { grid-template-columns: repeat(3, 1fr); }
+      .jornada-grid::before { display: none; }
       .dif-inner { grid-template-columns: 1fr; gap: 60px; }
       .processo-grid { grid-template-columns: repeat(3, 1fr); }
       .processo-grid::before { display: none; }
@@ -1193,14 +1494,11 @@
     }
     @media (max-width: 640px) {
       .container { padding: 0 20px; }
-      nav { display: none; }
-      .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      .mobile-menu { display: flex; }
       #hero { padding: 100px 0 80px; }
       .hero-inner { gap: 40px; }
-      .numeros-inner { grid-template-columns: repeat(2, 1fr); }
       .esp-grid { grid-template-columns: 1fr; }
+      .locais-grid { grid-template-columns: 1fr; }
+      .jornada-grid { grid-template-columns: 1fr 1fr; gap: 32px 16px; }
       .dep-grid { grid-template-columns: 1fr; }
       .processo-grid { grid-template-columns: 1fr 1fr; gap: 32px 16px; }
       .footer-inner { grid-template-columns: 1fr; }
