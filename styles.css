@@ -1479,9 +1479,56 @@
       .sobre-badge { right: 0; }
       .esp-grid { grid-template-columns: repeat(2, 1fr); }
       .esp-gallery { grid-template-columns: 1fr; }
-      .rino-inner { grid-template-columns: 1fr; gap: 60px; }
-      .septo-inner { grid-template-columns: 1fr; gap: 60px; }
-      .nasofi-inner { grid-template-columns: 1fr; gap: 60px; }
+      /* TEMPORÁRIO - sem imagens */
+
+.rino-inner,
+.septo-inner,
+.nasofi-inner {
+    grid-template-columns: 1fr !important;
+}
+
+.rino-content,
+.septo-content,
+.nasofi-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.rino-content .section-label,
+.rino-content .section-title,
+.rino-content .divider-gold,
+
+.septo-content .section-label,
+.septo-content .section-title,
+.septo-content .divider-gold,
+
+.nasofi-content .section-label,
+.nasofi-content .section-title,
+.nasofi-content .divider-gold {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rino-content,
+.septo-content,
+.nasofi-content {
+    text-align: center;
+}
+
+.rino-list,
+.septo-list,
+.nasofi-list {
+    display: table;
+    margin: 0 auto 36px auto;
+    text-align: left;
+}
+
+.rino-content .btn-primary,
+.septo-content .btn-primary,
+.nasofi-content .btn-primary {
+    margin: 0 auto;
+}
       .locais-grid { grid-template-columns: 1fr 1fr; }
       .jornada-grid { grid-template-columns: repeat(3, 1fr); }
       .jornada-grid::before { display: none; }
@@ -1521,46 +1568,4 @@
     .wa-float:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,0.5); }
     .wa-float svg { width: 26px; height: 26px; fill: white; }
 
-/* Quando não existir imagem */
-.rino-content,
-.septo-content,
-.nasofi-content {
-    max-width: 900px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
 
-/* Textos */
-.rino-bio,
-.septo-bio,
-.nasofi-bio {
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Títulos das indicações */
-.rino-indicacoes-title,
-.septo-indicacoes-title,
-.nasofi-indicacoes-title {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Lista centralizada */
-.rino-list,
-.septo-list,
-.nasofi-list {
-    width: fit-content;
-    margin: 0 auto 32px;
-    text-align: left;
-}
-
-/* Botão */
-.rino-content .btn-primary,
-.septo-content .btn-primary,
-.nasofi-content .btn-primary {
-    display: inline-flex;
-    margin: 0 auto;
-}
