@@ -1520,33 +1520,47 @@
     }
     .wa-float:hover { transform: scale(1.1); box-shadow: 0 8px 30px rgba(37,211,102,0.5); }
     .wa-float svg { width: 26px; height: 26px; fill: white; }
-/* Centralizar conteúdo quando não houver imagens */
-.rino-inner,
-.septo-inner,
-.nasofi-inner {
-    display: flex;
-    justify-content: center;
-}
 
+/* Quando não existir imagem */
 .rino-content,
 .septo-content,
 .nasofi-content {
     max-width: 900px;
     width: 100%;
+    margin: 0 auto;
     text-align: center;
 }
 
-/* Centraliza listas */
+/* Textos */
+.rino-bio,
+.septo-bio,
+.nasofi-bio {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Títulos das indicações */
+.rino-indicacoes-title,
+.septo-indicacoes-title,
+.nasofi-indicacoes-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Lista centralizada */
 .rino-list,
 .septo-list,
 .nasofi-list {
-    display: inline-block;
+    width: fit-content;
+    margin: 0 auto 32px;
     text-align: left;
 }
 
-/* Centraliza botões */
+/* Botão */
 .rino-content .btn-primary,
 .septo-content .btn-primary,
 .nasofi-content .btn-primary {
+    display: inline-flex;
     margin: 0 auto;
 }
