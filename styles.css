@@ -1479,56 +1479,9 @@
       .sobre-badge { right: 0; }
       .esp-grid { grid-template-columns: repeat(2, 1fr); }
       .esp-gallery { grid-template-columns: 1fr; }
-      /* TEMPORÁRIO - sem imagens */
-
-.rino-inner,
-.septo-inner,
-.nasofi-inner {
-    grid-template-columns: 1fr !important;
-}
-
-.rino-content,
-.septo-content,
-.nasofi-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.rino-content .section-label,
-.rino-content .section-title,
-.rino-content .divider-gold,
-
-.septo-content .section-label,
-.septo-content .section-title,
-.septo-content .divider-gold,
-
-.nasofi-content .section-label,
-.nasofi-content .section-title,
-.nasofi-content .divider-gold {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.rino-content,
-.septo-content,
-.nasofi-content {
-    text-align: center;
-}
-
-.rino-list,
-.septo-list,
-.nasofi-list {
-    display: table;
-    margin: 0 auto 36px auto;
-    text-align: left;
-}
-
-.rino-content .btn-primary,
-.septo-content .btn-primary,
-.nasofi-content .btn-primary {
-    margin: 0 auto;
-}
+      ..rino-inner {grid-template-columns: 1fr 1fr; }
+      .septo-inner {grid-template-columns: 1fr 1fr; }
+      .nasofi-inner {grid-template-columns: 1fr 1fr; }
       .locais-grid { grid-template-columns: 1fr 1fr; }
       .jornada-grid { grid-template-columns: repeat(3, 1fr); }
       .jornada-grid::before { display: none; }
