@@ -548,10 +548,17 @@
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .sobre-inner { grid-template-columns: 1fr; gap: 60px; }
+
   .sobre-badge {
-    top: 10px;
-    right: -60px;
+    top: -15px;
+    right: -40px;
+  }
+
+  .sobre-photo-tag {
+    left: 12px;
+    bottom: -16px;
   }
 }
     .sobre-badge-num {
