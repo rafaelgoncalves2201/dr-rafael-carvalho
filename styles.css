@@ -552,8 +552,8 @@
   .sobre-inner { grid-template-columns: 1fr; gap: 60px; }
 
   .sobre-badge {
-    top: -15px;
-    right: -60px;
+    top: -25px;
+    right: -40px;
   }
 
   .sobre-photo-tag {
